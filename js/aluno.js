@@ -71,7 +71,7 @@ class ControllerAluno{
             <center>Aluno mais velho </center>
             <hr>
             Nome : ${aluno.nome}<br>
-            Idade : ${aluno.idade}
+            Idade : ${aluno.idade} anos
         </div>
         `
         if (aluno.nome==""|| aluno.idade=="") {
@@ -87,7 +87,7 @@ class ControllerAluno{
            <center> Aluno mais novo </center>
             <hr>
             Nome : ${aluno.nome}<br>
-            Idade : ${aluno.idade}
+            Idade : ${aluno.idade} anos
         </div>
 
         `
@@ -101,7 +101,7 @@ class ControllerAluno{
         $(tipo).show();
         setTimeout(function () {            
             $(tipo).hide(); 
-        }, 2500);
+        }, 3000);
     }
 };
 
