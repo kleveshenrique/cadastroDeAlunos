@@ -97,11 +97,18 @@ class ControllerAluno{
         
     };
        
-    showAlert(tipo){
-        $(tipo).show();
-        setTimeout(function () {            
-            $(tipo).hide(); 
-        }, 3000);
+    showAlert(idAlert){
+        $(idAlert).show();
+        if (idAlert==msgDanger) {
+            setTimeout(function () {            
+                $(idAlert).hide(); 
+            }, 10000);    
+        }else{
+            setTimeout(function () {            
+                $(idAlert).hide(); 
+            }, 3000);
+        }        
+        
     }
 };
 
