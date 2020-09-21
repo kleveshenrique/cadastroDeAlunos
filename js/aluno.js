@@ -98,6 +98,7 @@ class ControllerAluno{
     };
        
     showAlert(idAlert){
+        $('.alert').hide();
         $(idAlert).show();
         if (idAlert==msgDanger) {
             setTimeout(function () {            
