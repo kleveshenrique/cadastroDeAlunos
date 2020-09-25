@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Alunos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="js/aluno.js"></script>
+    <script src="js/aluno.js"></script>  
+    <script src="js/gerenciador-aluno.js"></script>
+    <script src="js/controller-aluno.js"></script>    
+    
 </head>
 <body>
     <div class="container center mt-2 col-sm-12 col-md-6 ">
@@ -28,9 +31,18 @@
                 <input id="idade" class="form-control" Nomes="form-control" type="text" name="idade" placeholder="Digite sua idade">
             </div>
             <div class="form-group">
+                <select class="form-control" name="sexo" id="sexo">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-primary sm-12  " onclick="controllerAluno.cadastrarAluno()">Salvar</button>
-                <button class="btn btn-primary sm-12 " id="btnNovo" onclick="controllerAluno.exibirAlunoMaisVelho()" disabled>Mais Velho</button>
-                <button class="btn btn-primary sm-12 " id="btnVelho" onclick="controllerAluno.exibirAlunoMaisNovo()" disabled>Mais Novo</button>
+                <button class="btn btn-primary sm-12 " id="btnNovo" onclick="controllerAluno.exibirAlunos('maisVelho')" disabled>Mais Velho</button>
+                <button class="btn btn-primary sm-12 " id="btnVelho" onclick="controllerAluno.exibirAlunos('maisNovo')" disabled>Mais Novo</button>
+                <button class="btn btn-primary sm-12 " id="btnHomens" onclick="controllerAluno.exibirAlunos('homens')" disabled>Homens</button>
+                <button class="btn btn-primary sm-12 " id="btnMulheres" onclick="controllerAluno.exibirAlunos('mulheres')" disabled>Mulheres</button>
+                <button class="btn btn-primary sm-12 " id="btnIdosos" onclick="controllerAluno.exibirAlunos('idosos')" disabled>Idosos</button>
             </div>  
         </div>
     </div>
